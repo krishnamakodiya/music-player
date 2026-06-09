@@ -18,7 +18,7 @@ body {
   overflow: hidden;
 }
 
-/* 💕 Hearts container */
+
 .hearts {
   position: fixed;
   inset: 0;
@@ -26,7 +26,7 @@ body {
   z-index: 0;
 }
 
-/* 💕 Individual heart */
+
 .heart {
   position: absolute;
   bottom: -15%;
@@ -37,7 +37,7 @@ body {
   filter: blur(0.3px);
 }
 
-/* 🎲 Floating animation */
+
 @keyframes floatUp {
   0% {
     transform: translateY(0) translateX(0) rotate(0deg) scale(0.9);
@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* 🎧 Player */
+
 .player {
   width: 360px;
   background: rgba(255,255,255,0.18);
@@ -105,7 +105,7 @@ h1 {
   overflow-y: auto;
 }
 
-/* 🎵 Track */
+
 .track {
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@ h1 {
   font-weight: 600;
 }
 
-/* 🔊 Sound wave */
+
 .wave {
   display: none;
   gap: 2px;
@@ -157,7 +157,7 @@ h1 {
 
 <body>
 
-<!-- 💕 Hearts -->
+
 <div class="hearts" id="hearts"></div>
 
 <div class="player">
@@ -177,7 +177,7 @@ h1 {
 </div>
 
 <script>
-/* 🎵 Songs */
+
 const files = Array.from({ length: 33 }, (_, i) => `song${i+1}.mp3`);
 
 const audio = document.getElementById("audio");
@@ -188,7 +188,7 @@ const loopBtn = document.getElementById("loopBtn");
 
 let index = 0;
 
-/* Build playlist */
+
 files.forEach((name, i) => {
   const row = document.createElement("div");
   row.className = "track paused";
@@ -246,7 +246,7 @@ function updateUI() {
   });
 }
 
-//* 💕 Generate hearts */
+
 const hearts = document.getElementById("hearts");
 for (let i = 0; i < 25; i++) {
   const h = document.createElement("div");
